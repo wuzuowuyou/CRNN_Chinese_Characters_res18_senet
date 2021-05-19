@@ -84,7 +84,7 @@ class CRNN_resnet18_senet(nn.Module):
         super(CRNN_resnet18_senet, self).__init__()
         assert imgH % 16 == 0, 'imgH has to be a multiple of 16'
 
-        self.cnn = resnet18()   # (1,3,32,320)  -->[1,512,1,80]
+        self.cnn = se_resnet18()   # (1,3,32,320)  -->[1,512,1,80]
         self.rnn = nn.Sequential(
             BidirectionalLSTM(512, nh, nh),
             BidirectionalLSTM(nh, nh, nclass))

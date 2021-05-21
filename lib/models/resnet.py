@@ -149,8 +149,8 @@ class ResNet(nn.Module):
                                        dilate=replace_stride_with_dilation[1])
         self.layer4 = self._make_layer(block, 512, layers[3], stride=(2,1),
                                        dilate=replace_stride_with_dilation[2])
-        self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
-        self.fc = nn.Linear(512 * block.expansion, num_classes)
+        #self.avgpool = nn.AdaptiveAvgPool2d((1, 1))  ##这里不注释掉的话保存的模型权重还有这里的fc层的权重
+        #self.fc = nn.Linear(512 * block.expansion, num_classes)##因为就是看init这里的参数的，有多少就统一放到model里面
 
         for m in self.modules():
             if isinstance(m, nn.Conv2d):

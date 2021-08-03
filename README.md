@@ -4,6 +4,10 @@ A Chinese characters recognition repository based on convolutional recurrent net
 
 from https://github.com/Sierkinhane/CRNN_Chinese_Characters_Rec
 
+# libtorch
+
+For the libtorch implementation, you can refer to [wuzuowuyou/crnn_libtorch](https://github.com/wuzuowuyou/crnn_libtorch)
+
 
 ## Dev Environments
 1. WIN 10 or Ubuntu 16.04

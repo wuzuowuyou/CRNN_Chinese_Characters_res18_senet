@@ -285,7 +285,7 @@ def resnet18(pretrained=False, progress=True, **kwargs):
     return _resnet('resnet18', BasicBlock, [2, 2, 2, 2], pretrained, progress,
                    **kwargs)
 
-def se_resnet18(num_classes=1_000):
+def se_resnet18(num_classes=1000):
     """Constructs a ResNet-18 model.
 
     Args:
